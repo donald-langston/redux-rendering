@@ -19,9 +19,18 @@ const initialState = [
 
 const reducer = (state = initialState, action) => {
     // Handle actions here - make sure you don't mutate the state!
-    const { type } = action;
+    const { type, color, radius } = action;
 
     // ACTION: Add a random circle
-
+    if(type === "GENERATE_CIRCLE") {
+        let newState = [
+            ...state,
+            {
+                radius,
+                color
+            }
+        ]
+        return newState;
+    }
     return state;
 }
