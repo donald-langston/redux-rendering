@@ -7,3 +7,10 @@ dispatch({type: null}); // Here we're making a call to dispatch() - this trigger
 
 // Write DOM event listeners here, make them dispatch actions to the Redux store 
 
+changeHeightWidth = (dimensions) => {
+    dispatch({type: 'CHANGE_DIMENSIONS', direction: dimensions.direction, amount: dimensions.amount})
+}
+
+changeColor = (color) => {
+    dispatch({type: 'CHANGE_COLOR', color})
+}
